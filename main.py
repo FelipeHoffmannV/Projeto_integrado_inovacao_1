@@ -41,6 +41,12 @@ class GerenciamentoEstoque:
         ''', (produtos.nome, produtos.categoria, produtos.quantidade, produtos.preco, produtos.localizacao))
         self.conn.commit()
 
+# função para remover produtos da tabela do banco de dados
+    # função para remover produtos da tabela do banco de dados
+    def remover_produto(self, produto_id):
+        self.cursor.execute('''DELETE FROM produtos WHERE id = ?''', (produto_id,))
+        self.conn.commit()
+
 # funcão para consultar produtos no banco de dados
     def consultar_produtos(self):
         self.cursor.execute("SELECT * FROM produtos")
@@ -59,8 +65,14 @@ class GerenciamentoEstoque:
 controle = GerenciamentoEstoque()
 
 Produto1 = ItemEstoque('Motorola Moto G-10' , 'Celulares', 50 , 250.25 , 'setor C, fila M, posicao 15')
+Produto2 = ItemEstoque('Notebook Asus Zenbook' , 'Computadores', 73 , 1500 , 'setor N, fila Z, posicao 26')
 
 controle.adicionar_produto(Produto1)
+controle.adicionar_produto(Produto2)
+
+# Teste para remover produto
+controle.remover_produto(1)
+
 
 produtos = controle.consultar_produtos()
 for produto in produtos:
