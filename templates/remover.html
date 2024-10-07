@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Remover Produto</h2>
+<form method="POST">
+    <div class="form-group">
+        <label for="produto_id">ID do Produto:</label>
+        <input type="number" class="form-control" id="produto_id" name="produto_id" required>
+    </div>
+    <button type="submit" class="btn btn-danger">Remover</button>
+</form>
+{% endblock %}

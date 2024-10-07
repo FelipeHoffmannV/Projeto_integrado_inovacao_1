@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Sistema de Estoque</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4">Sistema de Gerenciamento de Estoque</h1>
+        <nav class="nav nav-pills flex-column flex-sm-row mb-4">
+            <a class="flex-sm-fill text-sm-center nav-link" href="{{ url_for('index') }}">Início</a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="{{ url_for('adicionar') }}">Adicionar Produto</a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="{{ url_for('remover') }}">Remover Produto</a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="{{ url_for('alterar') }}">Alterar Produto</a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="{{ url_for('consultar') }}">Consultar Estoque</a>
+        </nav>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <div class="alert alert-success">
+              {{ messages[0] }}
+            </div>
+          {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

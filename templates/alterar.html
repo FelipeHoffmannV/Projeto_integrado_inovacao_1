@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Alterar Produto</h2>
+<form method="POST">
+    <div class="form-group">
+        <label for="produto_id">ID do Produto:</label>
+        <input type="number" class="form-control" id="produto_id" name="produto_id" required>
+    </div>
+    <div class="form-group">
+        <label for="nova_quantidade">Nova Quantidade:</label>
+        <input type="number" class="form-control" id="nova_quantidade" name="nova_quantidade">
+    </div>
+    <div class="form-group">
+        <label for="novo_preco">Novo Preço:</label>
+        <input type="number" step="0.01" class="form-control" id="novo_preco" name="novo_preco">
+    </div>
+    <button type="submit" class="btn btn-primary">Alterar</button>
+</form>
+{% endblock %}

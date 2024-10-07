@@ -20,3 +20,12 @@ Projeto realizado no âmbito acadêmico, com intuito de praticar conceitos inter
 - O sistema recebe dados digitados pelo usuário e consegue realizar funções de adicionar produtos, remover produtos, alterar quantidade e alterar preço com êxito. Também é possível vizualizar os produtos em estoque com todas suas informações.
 
 - O programa atende quase todos os requisitos dispostos na atividade, porém falta implementar a elaboração de relatórios aonde mostram os itens com estoque baixo e itens com estoque muito elevado. 
+
+----- Dia 07/10/2024 -----
+
+- Tomei liberdade para implementar uma interface baseada na web simples utilizando flask, html e um pouco de css, estou me aprofundando nos estudos de flask fora as dicsiplinas da universidade, mas acredito ter cumprido todos os requisitos do projeto para um melhor gerenciamnto. 
+
+- O projeto foi CONCLUÍDO HOJE DIA 07/10/2024. Apenas irei criar o trabalho para enviar junto aos links para averiguação do funcionamento e demais requisitos.
+
+
+__________PARA INICIAR O PROGRAMA DIGITE PYTHON APP.PY NO TERMINAL DE COMANDO DO SEU EDITOR DE CÓDIGO__________
